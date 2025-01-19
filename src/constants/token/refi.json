@@ -1,0 +1,54 @@
+{
+  "name": "Rectangle Finance Default List",
+  "timestamp": "2023-08-31T00:00:00Z",
+  "version": {
+    "major": 2,
+    "minor": 10,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "/images/coins/0xC75835C00C7b1B8589D2438e8b8D83472D238306.png",
+  "keywords": ["rectangle", "default"],
+  "tokens": [
+    {
+      "name": "Wrapped BNB",
+      "symbol": "WBNB",
+      "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://bscscan.com/token/images/bnbchain2_32.png"
+    },
+    {
+      "name": "Rectangle",
+      "symbol": "RTG",
+      "address": "0xC75835C00C7b1B8589D2438e8b8D83472D238306",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://bscscan.com/token/images/rectangleofficial_32.png"
+    },
+    {
+      "name": "Binance-Peg BUSD Token",
+      "symbol": "BUSD",
+      "address": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://bscscan.com/token/images/busd_32_2.png"
+    },
+    {
+      "name": "Binance-Peg BSC-USD",
+      "symbol": "USDT",
+      "address": "0x55d398326f99059fF775485246999027B3197955",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://bscscan.com/token/images/busdt_32.png"
+    },
+    {
+      "name": "Binance-Peg USD Coin",
+      "symbol": "USDC",
+      "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://bscscan.com/token/images/centre-usdc_28.png"
+    }
+  ]
+}
