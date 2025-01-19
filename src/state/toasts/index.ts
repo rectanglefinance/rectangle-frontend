@@ -1,13 +1,10 @@
 /* eslint-disable no-param-reassign */
 import { Toast } from '@mozartfinance/uikit'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { ToastsState } from '../types'
 
 const initialState: ToastsState = {
   data: [],
-}
-
-export interface ToastsState {
-  data: Toast[]
 }
 
 export const toastsSlice = createSlice({

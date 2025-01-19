@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <!-- GTAG -->
     <script>
-      ;(function(w, d, s, l, i) {
+      ;(function (w, d, s, l, i) {
         w[l] = w[l] || []
         w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
         var f = d.getElementsByTagName(s)[0],
@@ -16,9 +16,11 @@
       })(window, document, 'script', 'dataLayer', '%REACT_APP_GTAG%')
     </script>
     <!-- Links -->
+    <link rel="preconnect" href="%REACT_APP_NODE_1%" />
+    <link rel="preconnect" href="%REACT_APP_NODE_2%" />
+    <link rel="preconnect" href="%REACT_APP_NODE_3%" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Kanit:400,500,900" rel="stylesheet" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
@@ -26,11 +28,22 @@
     <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
+
     <!-- Meta -->
     <title>Rectangle Finance</title>
-    <meta name="description" content="Classiest DEFI project on #BSC." />
-    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no" />
-
+    <meta
+      name="description"
+      content="Classiest DEFI project on #BSC."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="twitter:image" content="/images/logoWithText.jpg" />
+    <meta
+      name="twitter:description"
+      content="Classiest DEFI project on #BSC."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Rectangle Finance - Classiest DEFI project on #BSC." />
   </head>
   <body>
     <!-- GTAG (noscript) -->
@@ -43,9 +56,6 @@
       ></iframe>
     </noscript>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <audio id="bgMusic">
-      <source src="swap.mp3" type="audio/mp3" />
-    </audio>
     <div id="root"></div>
   </body>
 </html>

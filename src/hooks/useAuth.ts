@@ -9,9 +9,10 @@ import {
   UserRejectedRequestError as UserRejectedRequestErrorWalletConnect,
   WalletConnectConnector,
 } from '@web3-react/walletconnect-connector'
-import { connectorLocalStorageKey, ConnectorNames } from '@mozartfinance/uikit'
-import useToast from 'hooks/useToast'
-import { connectorsByName } from 'connectors'
+import { ConnectorNames, connectorLocalStorageKey } from '@mozartfinance/uikit'
+import { useToast } from 'state/hooks'
+import { connectorsByName } from 'utils/web3React'
+import { setupNetwork } from 'utils/wallet'
 
 const useAuth = () => {
   const { activate, deactivate } = useWeb3React()
@@ -21,22 +22,27 @@ const useAuth = () => {
     const connector = connectorsByName[connectorID]
     if (connector) {
       activate(connector, async (error: Error) => {
-        window.localStorage.removeItem(connectorLocalStorageKey)
         if (error instanceof UnsupportedChainIdError) {
-          toastError('Unsupported Chain Id', 'Unsupported Chain Id Error. Check your chain Id.')
-        } else if (error instanceof NoEthereumProviderError || error instanceof NoBscProviderError) {
-          toastError('Provider Error', 'No provider was found')
-        } else if (
-          error instanceof UserRejectedRequestErrorInjected ||
-          error instanceof UserRejectedRequestErrorWalletConnect
-        ) {
-          if (connector instanceof WalletConnectConnector) {
-            const walletConnector = connector as WalletConnectConnector
-            walletConnector.walletConnectProvider = null
+          const hasSetup = await setupNetwork()
+          if (hasSetup) {
+            activate(connector)
           }
-          toastError('Authorization Error', 'Please authorize to access your account')
         } else {
-          toastError(error.name, error.message)
+          window.localStorage.removeItem(connectorLocalStorageKey)
+          if (error instanceof NoEthereumProviderError || error instanceof NoBscProviderError) {
+            toastError('Provider Error', 'No provider was found')
+          } else if (
+            error instanceof UserRejectedRequestErrorInjected ||
+            error instanceof UserRejectedRequestErrorWalletConnect
+          ) {
+            if (connector instanceof WalletConnectConnector) {
+              const walletConnector = connector as WalletConnectConnector
+              walletConnector.walletConnectProvider = null
+            }
+            toastError('Authorization Error', 'Please authorize to access your account')
+          } else {
+            toastError(error.name, error.message)
+          }
         }
       })
     } else {

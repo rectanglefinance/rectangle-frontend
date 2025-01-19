@@ -1,11 +1,11 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { ToastContainer, Toast } from '@mozartfinance/uikit'
-import useToast from 'hooks/useToast'
-import { AppState } from '../../state'
+import { useToast } from 'state/hooks'
+import { State } from 'state/types'
 
 const ToastListener = () => {
-  const toasts: Toast[] = useSelector((state: AppState) => state.toasts.data)
+  const toasts: Toast[] = useSelector((state: State) => state.toasts.data)
   const { remove } = useToast()
 
   const handleRemove = (id: string) => remove(id)
