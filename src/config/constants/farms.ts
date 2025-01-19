@@ -6,7 +6,7 @@ const farms: FarmConfig[] = [
     pid: 0,
     lpSymbol: 'RTG',
     lpAddresses: {
-      56: '0xd46936677B2C1Bb696F2b67c55239331E2b7Cd42',
+      56: '0xC75835C00C7b1B8589D2438e8b8D83472D238306',
       97: '',
     },
     token: tokens.foam,
@@ -16,7 +16,7 @@ const farms: FarmConfig[] = [
     pid: 1,
     lpSymbol: 'RTG-BNB LP',
     lpAddresses: {
-      56: '0xb40AE531Da43F7D114F2E6D9c331171Ef4130f5F',
+      56: '0x142735b1C9C9509DFBfBdDeC5d4b0eC8D48De9fE',
       97: '',
     },
     token: tokens.rtg,
