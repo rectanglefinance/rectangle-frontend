@@ -8,8 +8,8 @@ BigNumber.config({
 export const BSC_BLOCK_TIME = 3
 export const CAKE_PER_BLOCK = new BigNumber(1)
 export const BLOCKS_PER_YEAR = new BigNumber((60 / BSC_BLOCK_TIME) * 60 * 24 * 365) // 10512000
-export const BASE_URL = 'http://localhost:3000'
-export const BASE_EXCHANGE_URL = 'http://localhost:3000'
+export const BASE_URL = '/'
+export const BASE_EXCHANGE_URL = '/'
 export const BASE_ADD_LIQUIDITY_URL = `${BASE_EXCHANGE_URL}/#/add`
 export const BASE_LIQUIDITY_POOL_URL = `${BASE_EXCHANGE_URL}/#/pool`
 export const BASE_FARMS = `${BASE_URL}/farms`
