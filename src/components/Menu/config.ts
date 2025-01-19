@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://charming-stardust-dcfe96.netlify.app/#/swap',
+        href: '/#/swap',
       },
       {
         label: 'Liquidity',
-        href: 'https://charming-stardust-dcfe96.netlify.app/#/pool',
+        href: '/#/pool',
       },
     ],
   },
