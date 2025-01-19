@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: '/',
+    href: 'https://rectangleswap.netlify.app',
   },
   {
     label: 'Trade',
@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: '/#/swap',
+        href: 'https://rectangleswap.netlify.app/#/swap',
       },
       {
         label: 'Liquidity',
-        href: '/#/pool',
+        href: 'https://rectangleswap.netlify.app/#/pool',
       },
     ],
   },
